@@ -1,13 +1,19 @@
 import React from 'react';
 import ReactDOM from 'react-dom/client';
 import './index.css';
-import App from './App';
 import reportWebVitals from './reportWebVitals';
+
+import TaskList from "./App";
+import { TASKS } from "./json";
+import "./styles.css";
 
 const root = ReactDOM.createRoot(document.getElementById('root'));
 root.render(
   <React.StrictMode>
-    <App />
+     <div className="App">
+     <h1>Taskboard using Drag & Drop - (By Mathan)</h1>
+      <TaskList tasks={TASKS} />
+    </div>
   </React.StrictMode>
 );
 
